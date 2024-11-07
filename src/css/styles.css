@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color: #37afe1;
+  --card-color: #f5f4b3;
+  --text-color: #ffffff;
+  --card-text: #987d9a;
+}
+
+body {
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 10px;
+}
+

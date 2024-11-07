@@ -7,6 +7,223 @@
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
+    <h1 class="title">Team Stats</h1>
+    <main>
+      <div class="team-stats">
+        <p>Team:<span id="team"></span></p>
+        <p>Sport:<span id="sport"></span></p>
+        <p>Year:<span id="year"></span></p>
+        <p>Head Coach:<span id="head-coach"></span></p>
+      </div>
+      <label class="options" for="players">Player Stats</label>
+      <select name="players" id="players">
+        <option value="all">All Players</option>
+        <option value="nicknames">Nicknames</option>
+        <option value="batters">Batters</option>
+        <option value="all-rounders">All Rounders</option>
+        <option value="bowlers">Bowlers</option>
+      </select>
+      <div class="cards" id="player-cards">
+        <div class="player-card">
+          <img
+            src="./src/images/chandi.webp"
+            alt="chandimal"
+            class="profile-photo"
+          />
+          <h2 class="name">Dinesh Chandimal (Captain)</h2>
+          <p>Role: Wicketkeeper Batter</p>
+          <p>Age: 24y 118d</p>
+          <p>Batting Style: Right hand Bat</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <img
+            src="./src/images/mahela.webp"
+            alt="mahela"
+            class="profile-photo"
+          />
+          <h2 class="name">Mahela Jayawardene</h2>
+          <p>Role: Batter</p>
+          <p>Age: 36y 293d</p>
+          <p>Batting Style: Right hand Bat</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <img
+            src="./src/images/kusal.webp"
+            alt="kusal"
+            class="profile-photo"
+          />
+          <h2 class="name">Kusal Perera</h2>
+          <p>Role: Wicketkeeper Batter</p>
+          <p>Age: 23y 211d</p>
+          <p>Batting Style: Left hand Bat</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <img
+            src="./src/images/sanga.webp"
+            alt="sanga"
+            class="profile-photo"
+          />
+          <h2 class="name">Kumar Sangakkara</h2>
+          <p>Role: Wicketkeeper Batter</p>
+          <p>Age: 36y 140d</p>
+          <p>Batting Style: Left hand Bat</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <img
+            src="./src/images/thiri.webp"
+            alt="thiri"
+            class="profile-photo"
+          />
+          <h2 class="name">Lahiru Thirimanne</h2>
+          <p>Role: Top order Batter</p>
+          <p>Age: 24y 219d</p>
+          <p>Batting Style: Left hand Bat</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <img
+            src="./src/images/dilshan.webp"
+            alt="dilshan"
+            class="profile-photo"
+          />
+          <h2 class="name">Tillakaratne Dilshan</h2>
+          <p>Role: Allrounder</p>
+          <p>Age: 37y 153d</p>
+          <p>Batting Style: Right hand Bat</p>
+          <p>Bowling Style: Right arm Offbreak</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <img
+            src="./src/images/mathews.webp"
+            alt="mathews"
+            class="profile-photo"
+          />
+          <h2 class="name">Angelo Mathews</h2>
+          <p>Role:</p>
+          <p>Age:</p>
+          <p>Batting Style: Right hand Bat</p>
+          <p>Bowling Style: Right arm Offbreak</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <img
+            src="./src/images/thisara.webp"
+            alt="thisara"
+            class="profile-photo"
+          />
+          <h2 class="name">Thisara Perera</h2>
+          <p>Role: Bowling Allrounder</p>
+          <p>Age: 24y 347d</p>
+          <p>Batting Style: Left hand Bat</p>
+          <p>Bowling Style: Right arm Medium fast</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <img
+            src="./src/images/seeku.webp"
+            alt="seeku"
+            class="profile-photo"
+          />
+          <h2 class="name">Seekkuge Prasanna</h2>
+          <p>Role: Allrounder</p>
+          <p>Age: 28y 262d</p>
+          <p>Batting Style: Right hand Bat</p>
+          <p>Bowling Style: Legbreak</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <img
+            src="./src/images/chathuranga.webp"
+            alt="chathuranga"
+            class="profile-photo"
+          />
+          <h2 class="name">Chaturanga de Silva</h2>
+          <p>Role: Allrounder</p>
+          <p>Age: 24y 58d</p>
+          <p>Batting Style: Left hand Bat</p>
+          <p>Bowling Style: Slow Left arm Orthodox</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <img
+            src="./src/images/malinga.webp"
+            alt="malinga"
+            class="profile-photo"
+          />
+          <h2 class="name">Lasith Malinga (Vice Captain)</h2>
+          <p>Role: Bowler</p>
+          <p>Age: 30y 200d</p>
+          <p>Bowling Style: Right arm Fast</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <img
+            src="./src/images/rangana.webp"
+            alt="rangana"
+            class="profile-photo"
+          />
+          <h2 class="name">Rangana Herath</h2>
+          <p>Role: Bowler</p>
+          <p>Age: 35y 362d</p>
+          <p>Bowling Style: Slow Left arm Orthodox</p>
+          <p>Nickname: N/A</p>
+        </div>
+
+        <div class="player-card">
+          <img src="src/images/kule.webp" alt="kule" class="profile-photo" />
+          <h2 class="name">Nuwan Kulasekara</h2>
+          <p>Role: Bowler</p>
+          <p>Age: 31y 237d</p>
+          <p>Bowling Style: Right arm Fast medium</p>
+          <p>Nickname: N/A</p>
+        </div>
+
+        <div class="player-card">
+          <img
+            src="./src/images/suranga.webp"
+            alt="suranga"
+            class="profile-photo"
+          />
+          <h2 class="name">Suranga Lakmal</h2>
+          <p>Role: Bowler</p>
+          <p>Age: 27y 6d</p>
+          <p>Bowling Style: Right arm Fast medium</p>
+          <p>Nickname: N/A</p>
+        </div>
+
+        <div class="player-card">
+          <img
+            src="./src/images/ajantha.webp"
+            alt="ajantha"
+            class="profile-photo"
+          />
+          <h2 class="name">Ajantha Mendis</h2>
+          <p>Role: Bowler</p>
+          <p>Age: 29y 5d</p>
+          <p>Bowling Style: Right arm Offbreak</p>
+
+          <p>Nickname: N/A</p>
+        </div>
+
+        <div class="player-card">
+          <img
+            src="./src/images/sachithra.webp"
+            alt="sachithra"
+            class="profile-photo"
+          />
+          <h2 class="name">Sachithra Senanayake</h2>
+          <p>Role: Bowler</p>
+          <p>Age: 29y 35d</p>
+          <p>Bowling Style: Right arm Offbreak</p>
+          <p>Nickname: N/A</p>
+        </div>
+      </div>
+    </main>
     <script src="./src/script/main.js"></script>
   </body>
 </html>
