@@ -10,7 +10,8 @@
   --background-color: #37afe1;
   --card-color: #f5f4b3;
   --text-color: #ffffff;
-  --card-text: #1E3E62;
+  --card-text: #1e3e62;
+  --name-color: #664343;
 }
 
 body {
@@ -29,38 +30,41 @@ body {
   margin: 1.3rem 0;
 }
 
-
-.team-stats{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-size: 1.5rem;
-    margin: 1.3rem 0;
+.team-stats {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  margin: 1.3rem 0;
 }
 
-.options{
-    font-size: 1.3rem;
+.options {
+  font-size: 1.3rem;
 }
 
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.player-card{
-    background-color: var(--card-color);
-    padding: 1.3rem;
-    margin: 1.2rem;
-    width: 300px;
-    height: 250px;
-    border-radius: 30px;
-    color: var(--card-text);
+.name {
+  color: var(--name-color);
 }
 
-@media(max-width: 768px){
-    .team-stats{
-        flex-direction: column;
-    }
+.player-card {
+  background-color: var(--card-color);
+  padding: 1.3rem;
+  margin: 1.2rem;
+  width: 300px;
+  height: 250px;
+  border-radius: 30px;
+  color: var(--card-text);
+}
+
+@media (max-width: 768px) {
+  .team-stats {
+    flex-direction: column;
+  }
 }
