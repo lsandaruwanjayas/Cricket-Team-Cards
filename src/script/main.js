@@ -21,6 +21,7 @@ const cricketTeam = {
       role: "Wicketkeeper Batter",
       age: "24y 118d",
       battingStyle: "Right hand Bat",
+      bowlingStyle: " Right arm Offbreak",
       isCaptain: true,
       nickname: "Chandi",
     },
@@ -30,6 +31,7 @@ const cricketTeam = {
       role: "Batter",
       age: "36y 293d",
       battingStyle: "Right hand Bat",
+      bowlingStyle: "Right arm Medium",
       isCaptain: false,
       nickname: "Master mind",
     },
@@ -47,6 +49,7 @@ const cricketTeam = {
       role: "Wicketkeeper Batter",
       age: "36y 140d",
       battingStyle: "Left hand Bat",
+      bowlingStyle: "Right arm Offbreak",
       isCaptain: false,
       nickname: "Sanga",
     },
@@ -55,6 +58,7 @@ const cricketTeam = {
       role: "Top order Batter",
       age: " 24y 219d",
       battingStyle: "Left hand Bat",
+      bowlingStyle: "Right arm Medium fast",
       isCaptain: false,
       nickname: null,
     },
@@ -107,6 +111,7 @@ const cricketTeam = {
       name: "Lasith Malinga (Vice Captain)",
       role: "Bowler",
       age: "30y 200d",
+      battingStyle: "Right hand Bat",
       bowlingStyle: "Right arm Fast",
       isCaptain: false,
       nickname: "Mali",
@@ -115,6 +120,7 @@ const cricketTeam = {
       name: "Rangana Herath",
       role: "Bowler",
       age: "35y 362d",
+      battingStyle: "Left hand Bat",
       bowlingStyle: "Slow Left arm Orthodox",
       isCaptain: false,
       nickname: null,
@@ -123,6 +129,7 @@ const cricketTeam = {
       name: "Nuwan Kulasekara",
       role: "Bowler",
       age: "31y 237d",
+      battingStyle: "Right hand Bat",
       bowlingStyle: "Right arm Fast medium",
       isCaptain: false,
       nickname: "Kule",
@@ -131,6 +138,7 @@ const cricketTeam = {
       name: "Suranga Lakmal",
       role: "Bowler",
       age: "27y 6d",
+      battingStyle: "Right hand Bat",
       bowlingStyle: "Right arm Fast medium",
       isCaptain: false,
       nickname: null,
@@ -139,7 +147,7 @@ const cricketTeam = {
       name: "Ajantha Mendis",
       role: "Bowler",
       age: "29y 5d",
-      battingStyle:"",
+      battingStyle:"Right hand Bat",
       bowlingStyle: "Right arm Offbreak",
       isCaptain: false,
       nickname: null,
@@ -148,6 +156,7 @@ const cricketTeam = {
       name: "Sachithra Senanayake",
       role: "Bowler",
       age: "29y 35d",
+      battingStyle: "Right hand Bat",
       bowlingStyle: "Right arm Offbreak",
       isCaptain: false,
       nickname: null,
@@ -203,7 +212,7 @@ playersDropdownList.addEventListener("change", (e) => {
 
     case "batters":
       setPlayerCards(players.filter((player) => player.role.match("Batter")));
-      break;
+       break;
 
     case "all-rounders":
       setPlayerCards(players.filter((player) => player.role.match("Allrounder")));
