@@ -20,22 +20,26 @@ const cricketTeam = {
       role: "Wicketkeeper Batter",
       age: "24y 118d",
       battingStyle: "Right hand Bat",
+      bowlingStyle: "",
       isCaptain: true,
-      nickname: null,
+      nickname: "Chandi",
     },
     {
+      profilePic: "./src/images/mahela.webp",
       name: "Mahela Jayawardene",
       role: "Batter",
       age: "36y 293d",
       battingStyle: "Right hand Bat",
+      bowlingStyle: "",
       isCaptain: false,
-      nickname: null,
+      nickname: "Master mind",
     },
     {
       name: "Kusal Perera",
       role: "Wicketkeeper Batter",
       age: " 23y 211d",
       battingStyle: "Left hand Bat",
+      bowlingStyle: "",
       isCaptain: false,
       nickname: null,
     },
@@ -45,7 +49,7 @@ const cricketTeam = {
       age: "36y 140d",
       battingStyle: "Left hand Bat",
       isCaptain: false,
-      nickname: null,
+      nickname: "Sanga",
     },
     {
       name: "Lahiru Thirimanne",
@@ -62,7 +66,7 @@ const cricketTeam = {
       battingStyle: "Right hand Bat",
       bowlingStyle: "Right arm Offbreak",
       isCaptain: false,
-      nickname: null,
+      nickname: "Dili",
     },
     {
       name: "Angelo Mathews",
@@ -71,7 +75,7 @@ const cricketTeam = {
       battingStyle: "Right hand Bat",
       bowlingStyle: "Right arm Offbreak",
       isCaptain: false,
-      nickname: null,
+      nickname: "Angi",
     },
     {
       name: "Thisara Perera",
@@ -104,14 +108,16 @@ const cricketTeam = {
       name: "Lasith Malinga (Vice Captain)",
       role: "Bowler",
       age: "30y 200d",
+      battingStyle:"",
       bowlingStyle: "Right arm Fast",
       isCaptain: false,
-      nickname: null,
+      nickname: "Mali",
     },
     {
       name: "Rangana Herath",
       role: "Bowler",
       age: "35y 362d",
+      battingStyle:"",
       bowlingStyle: "Slow Left arm Orthodox",
       isCaptain: false,
       nickname: null,
@@ -121,13 +127,15 @@ const cricketTeam = {
       role: "Bowler",
       age: "31y 237d",
       bowlingStyle: "Right arm Fast medium",
+      battingStyle:"",
       isCaptain: false,
-      nickname: null,
+      nickname: "Kule",
     },
     {
       name: "Suranga Lakmal",
       role: "Bowler",
       age: "27y 6d",
+      battingStyle:"",
       bowlingStyle: "Right arm Fast medium",
       isCaptain: false,
       nickname: null,
@@ -136,6 +144,7 @@ const cricketTeam = {
       name: "Ajantha Mendis",
       role: "Bowler",
       age: "29y 5d",
+      battingStyle:"",
       bowlingStyle: "Right arm Offbreak",
       isCaptain: false,
       nickname: null,
@@ -144,6 +153,7 @@ const cricketTeam = {
       name: "Sachithra Senanayake",
       role: "Bowler",
       age: "29y 35d",
+      battingStyle:"",
       bowlingStyle: "Right arm Offbreak",
       isCaptain: false,
       nickname: null,
@@ -164,6 +174,7 @@ const setPlayerCards = (arr = players) => {
   playerCards.innerHTML += arr
     .map(
       ({
+        profilePic,
         name,
         role,
         age,
@@ -172,7 +183,8 @@ const setPlayerCards = (arr = players) => {
         isCaptain,
         nickname,
       }) => {
-        `<div class="player-card">
+        return `<div class="player-card">
+        <img src=${profilePic}>
         <h2>${name} ${isCaptain ? "(Captain)" : ""}</h2>
         <p>Role:  ${role}</p>
         <p>Age: ${age}</p>
@@ -180,7 +192,7 @@ const setPlayerCards = (arr = players) => {
         <p>Bowling Style: ${bowlingStyle}</p>
         <p>Nickname: ${nickname !== null ? nickname : "N/A"}</p>
         </div>
-        `;
+        `
       }
     )
     .join("");
@@ -189,13 +201,25 @@ const setPlayerCards = (arr = players) => {
 playersDropdownList.addEventListener("change", (e) => {
   playerCards.innerHTML = "";
 
+  console.log(e.target.value);
   switch (e.target.value) {
     case "nickname":
       setPlayerCards(players.filter((player) => player.nickname !== null));
       break;
 
     case "batters":
-      setPlayerCards(players.filter((player) => player.role === "batters"));
+      setPlayerCards(players.filter((player) => player.role === "Batter"));
       break;
+
+    case "all-rounders":
+      setPlayerCards(players.filter((player) => player.role === "Allrounder"));
+      break;
+
+    case "bowlers":
+      setPlayerCards(players.filter((player) => player.role === "Bowler"));
+      break;
+
+    default:
+      setPlayerCards();
   }
 });
