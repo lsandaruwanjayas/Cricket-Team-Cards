@@ -16,11 +16,11 @@ const cricketTeam = {
   },
   players: [
     {
+      profilePic: "./src/images/chandi.webp",
       name: "Dinesh Chandimal (Captain)",
       role: "Wicketkeeper Batter",
       age: "24y 118d",
       battingStyle: "Right hand Bat",
-      bowlingStyle: "",
       isCaptain: true,
       nickname: "Chandi",
     },
@@ -30,20 +30,19 @@ const cricketTeam = {
       role: "Batter",
       age: "36y 293d",
       battingStyle: "Right hand Bat",
-      bowlingStyle: "",
       isCaptain: false,
       nickname: "Master mind",
     },
     {
+      profilePic: "./src/images/kusal.webp",
       name: "Kusal Perera",
       role: "Wicketkeeper Batter",
       age: " 23y 211d",
       battingStyle: "Left hand Bat",
-      bowlingStyle: "",
       isCaptain: false,
       nickname: null,
     },
-    {
+    {  profilePic: "./src/images/sanga.webp",
       name: "Kumar Sangakkara",
       role: "Wicketkeeper Batter",
       age: "36y 140d",
@@ -51,7 +50,7 @@ const cricketTeam = {
       isCaptain: false,
       nickname: "Sanga",
     },
-    {
+    {  profilePic: "./src/images/thiri.webp",
       name: "Lahiru Thirimanne",
       role: "Top order Batter",
       age: " 24y 219d",
@@ -59,7 +58,7 @@ const cricketTeam = {
       isCaptain: false,
       nickname: null,
     },
-    {
+    {  profilePic: "./src/images/dilshan.webp",
       name: "Tillakaratne Dilshan",
       role: "Allrounder",
       age: "37y 153d",
@@ -68,7 +67,7 @@ const cricketTeam = {
       isCaptain: false,
       nickname: "Dili",
     },
-    {
+    {  profilePic: "./src/images/mathews.webp",
       name: "Angelo Mathews",
       role: "Allrounder",
       age: "26y 287d",
@@ -77,7 +76,7 @@ const cricketTeam = {
       isCaptain: false,
       nickname: "Angi",
     },
-    {
+    {  profilePic: "./src/images/thisara.webp",
       name: "Thisara Perera",
       role: "Bowling Allrounder",
       age: "24y 347d",
@@ -86,7 +85,7 @@ const cricketTeam = {
       isCaptain: false,
       nickname: null,
     },
-    {
+    {  profilePic: "./src/images/seeku.webp",
       name: "Seekkuge Prasanna",
       role: "Allrounder",
       age: "28y 262d",
@@ -95,7 +94,7 @@ const cricketTeam = {
       isCaptain: false,
       nickname: null,
     },
-    {
+    {  profilePic: "./src/images/chathuranga.webp",
       name: "Chaturanga de Silva",
       role: "Allrounder",
       age: "24y 58d",
@@ -104,43 +103,39 @@ const cricketTeam = {
       isCaptain: false,
       nickname: null,
     },
-    {
+    {  profilePic: "./src/images/malinga.webp",
       name: "Lasith Malinga (Vice Captain)",
       role: "Bowler",
       age: "30y 200d",
-      battingStyle:"",
       bowlingStyle: "Right arm Fast",
       isCaptain: false,
       nickname: "Mali",
     },
-    {
+    {  profilePic: "./src/images/rangana.webp",
       name: "Rangana Herath",
       role: "Bowler",
       age: "35y 362d",
-      battingStyle:"",
       bowlingStyle: "Slow Left arm Orthodox",
       isCaptain: false,
       nickname: null,
     },
-    {
+    {  profilePic: "src/images/kule.webp",
       name: "Nuwan Kulasekara",
       role: "Bowler",
       age: "31y 237d",
       bowlingStyle: "Right arm Fast medium",
-      battingStyle:"",
       isCaptain: false,
       nickname: "Kule",
     },
-    {
+    {  profilePic: "./src/images/suranga.webp",
       name: "Suranga Lakmal",
       role: "Bowler",
       age: "27y 6d",
-      battingStyle:"",
       bowlingStyle: "Right arm Fast medium",
       isCaptain: false,
       nickname: null,
     },
-    {
+    {  profilePic: "./src/images/ajantha.webp",
       name: "Ajantha Mendis",
       role: "Bowler",
       age: "29y 5d",
@@ -149,11 +144,10 @@ const cricketTeam = {
       isCaptain: false,
       nickname: null,
     },
-    {
+    {  profilePic: "./src/images/sachithra.webp",
       name: "Sachithra Senanayake",
       role: "Bowler",
       age: "29y 35d",
-      battingStyle:"",
       bowlingStyle: "Right arm Offbreak",
       isCaptain: false,
       nickname: null,
@@ -208,15 +202,15 @@ playersDropdownList.addEventListener("change", (e) => {
       break;
 
     case "batters":
-      setPlayerCards(players.filter((player) => player.role === "Batter"));
+      setPlayerCards(players.filter((player) => player.role.match("Batter")));
       break;
 
     case "all-rounders":
-      setPlayerCards(players.filter((player) => player.role === "Allrounder"));
+      setPlayerCards(players.filter((player) => player.role.match("Allrounder")));
       break;
 
     case "bowlers":
-      setPlayerCards(players.filter((player) => player.role === "Bowler"));
+      setPlayerCards(players.filter((player) => player.role.match("Bowler")));
       break;
 
     default:
